@@ -1,7 +1,9 @@
 ## Invoking Scripts From Services
 
-This is a simple service that invokes a shell script.  It's OSX specific
-but the idea should be the same on win32 as well.
+This is a simple service that invokes a shell script or batch file.
+The output of the script is captured inside the ruby environment and
+can then be manipulated, returned, whatever.
+
 
 ## Example output
 
