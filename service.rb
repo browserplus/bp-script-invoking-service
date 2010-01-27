@@ -1,10 +1,17 @@
 class ScriptInvokerInstance
   def initialize(context)  
+    @scriptPrefix = "./"
+    @scriptSuffix = ".sh"
+    if RUBY_PLATFORM =~ /(win|w)32/
+      @scriptPrefix = ""
+      @scriptSuffix = ".bat"
+    end
   end  
   
   def HelloWorld(transaction, args)  
+    script = @scriptPrefix + "hello_world" + @scriptSuffix
     rd = ""
-    IO.popen("./hello_world.sh", "r") do |f|
+    IO.popen(script, "r") do |f|
       while x = f.gets
         rd = rd + x
       end
