@@ -1,0 +1,8 @@
+This repo can be used to build the BrowserPlus script invoking service.
+This is a simple service that invokes a shell script or batch file.
+The output of the script is captured inside the ruby environment and
+can then be manipulated, returned, whatever.
+
+This service uses submodules browserplus/bakery, and browserplus/bp-service-framework.
+ 
+Instructions to build the service are in the file BUILDING.
